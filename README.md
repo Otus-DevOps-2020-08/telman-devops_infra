@@ -36,8 +36,7 @@ Host someinternalhost
 
 ## Выполнено ДЗ 5
 
-testapp_IP = 130.193.56.45
-testapp_port = 9292
+testapp_IP = 130.193.56.45  testapp_port = 9292
 
 #### Запуск через CLI:
 
