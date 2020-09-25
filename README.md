@@ -51,3 +51,9 @@ yc compute instance create \
     --metadata serial-port-enable=1 \
     --metadata-from-file user-data=./metadata.yaml
 ```
+
+## Выполнено ДЗ 6
+
+> Собран packer ubuntu16.json (Fry образ)
+
+> Собран packer immutable.json (Bake образ)
