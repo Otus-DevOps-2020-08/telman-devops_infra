@@ -1,0 +1,10 @@
+[Unit]
+Description=Puma HTTP Server
+
+[Service]
+Type=simple
+#WorkingDirectory=/home/ubuntu
+ExecStart=/bin/bash home/ubuntu/reddit.sh
+
+[Install]
+WantedBy=multi-user.target
