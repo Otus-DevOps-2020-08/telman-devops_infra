@@ -1,4 +1,19 @@
+# PhpStorm IDE
 .idea/
+
+# pre-commit-config
 .pre-commit-config.yaml
+
+# Yandex.Cloud private key
 key.json
+
+# Packer sensative variables
 /packer/variables.json
+
+# Terraform local & sensative files
+*.tfstate
+*.tfstate.*.backup
+*.tfstate.backup
+*.tfvars
+.terraform/
+terraform_key.json

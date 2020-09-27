@@ -57,3 +57,7 @@ yc compute instance create \
 > Собран packer ubuntu16.json (Fry образ)
 
 > Собран packer immutable.json (Bake образ)
+
+## Выполнено ДЗ 7
+
+> Создание и провижинер через terraform
