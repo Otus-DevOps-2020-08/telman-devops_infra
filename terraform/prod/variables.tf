@@ -25,6 +25,22 @@ variable "image_id" {
 variable "public_key_path" {
   description = "id_rsa pub"
 }
+
 variable "private_key_path" {
   description = "id_rsa private"
+}
+
+variable "instance_count" {
+  description = "count of instance"
+  default     = "1"
+}
+
+variable app_disk_image {
+  description = "Disk image for reddit app"
+  default     = "fd8okdlfldstedj23ucd"
+}
+
+variable db_disk_image {
+  description = "Disk image for reddit DB"
+  default     = "fd8kckqemnbpjvdd1lmb"
 }
