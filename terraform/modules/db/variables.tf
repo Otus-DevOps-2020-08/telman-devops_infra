@@ -6,5 +6,8 @@ variable "subnet_id" {
   description = "subnet"
 }
 variable "public_key_path" {
-  description = "id_rsa pub"
+  description = "public id_rsa"
+}
+variable "private_key_path" {
+  description = "private id_rsa"
 }
