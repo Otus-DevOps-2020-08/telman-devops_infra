@@ -22,6 +22,6 @@ module "db" {
   subnet_id       = var.subnet_id
 }
 
-module "vpc" {
-  source = "../modules/vpc"
-}
+//module "vpc" {
+//  source = "../modules/vpc"
+//}
