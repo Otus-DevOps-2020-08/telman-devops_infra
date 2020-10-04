@@ -5,6 +5,10 @@ resource "yandex_compute_instance" "app" {
     tags = "reddit-app"
   }
 
+  scheduling_policy {
+    preemptible = true
+  }
+
   resources {
     cores  = 2
     memory = 2

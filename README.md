@@ -61,3 +61,16 @@ yc compute instance create \
 ## Выполнено ДЗ 7
 
 > Создание и провижинер через terraform
+
+## Выполнено ДЗ 8
+
+> Созданы Stage & Prod окружения
+
+> Провижионеры вынесены в модули
+```shell script
+terraform get
+```
+> Отформатированы конфигурационные файлы
+```shell script
+terraform fmt
+```
