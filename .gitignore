@@ -17,3 +17,5 @@ key.json
 *.tfvars
 .terraform/
 terraform_key.json
+
+webinars/*
