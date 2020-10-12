@@ -74,3 +74,15 @@ terraform get
 ```shell script
 terraform fmt
 ```
+
+## Выполнено ДЗ 9
+
+```shell script
+ansible app -m command -a 'rm -rf ~/reddit'
+```
+> Удалит директорию
+
+```shell script
+ansible-playbook clone.yml
+```
+> Клонирует репозиторий: changed=1
