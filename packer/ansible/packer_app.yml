@@ -3,7 +3,7 @@
   hosts: app
   become: true
   tasks:
-    - name: Install
+    - name: Install ruby packages
       apt:
         name: "{{ item }}"
         state: present
@@ -11,3 +11,8 @@
         - ruby-full
         - ruby-bundler
         - build-essential
+    - name: Install git
+      apt:
+        name: git
+        state: present
+        update_cache: yes

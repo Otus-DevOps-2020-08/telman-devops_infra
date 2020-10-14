@@ -8,7 +8,6 @@
       apt:
         name: "{{ item }}"
         state: present
-        update_cache: yes
       loop:
         - apt-transport-https
         - libcurl3-gnutls
@@ -16,8 +15,8 @@
 
     - name: Add apt key
       apt_key:
-        url: "https://www.mongodb.org/static/pgp/server-4.2.asc"
         id: EA312927
+        keyserver: keyserver.ubuntu.com
 
     - name: Add repository
       apt_repository:
@@ -35,10 +34,8 @@
       service:
         name: mongod
         state: started
-      notify: start mongodb
 
-  handlers:
-    - name: enabled mongodb
-      service:
+    - name: Enable mongodb
+      systemd:
         name: mongod
         enabled: yes
