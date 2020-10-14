@@ -1,0 +1,44 @@
+---
+
+- name: Install MongoDB
+  hosts: db
+  become: true
+  tasks:
+    - name: Install packages
+      apt:
+        name: "{{ item }}"
+        state: present
+        update_cache: yes
+      loop:
+        - apt-transport-https
+        - libcurl3-gnutls
+        - ca-certificates
+
+    - name: Add apt key
+      apt_key:
+        url: "https://www.mongodb.org/static/pgp/server-4.2.asc"
+        id: EA312927
+
+    - name: Add repository
+      apt_repository:
+        repo: "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/{{ ansible_distribution|lower }} xenial/mongodb-org/4.2 multiverse"
+        state: present
+        update_cache: yes
+
+    - name: Install MongoDB
+      apt:
+        name: mongodb-org
+        state: present
+        update_cache: yes
+
+    - name: Start MongoDB
+      service:
+        name: mongod
+        state: started
+      notify: start mongodb
+
+  handlers:
+    - name: enabled mongodb
+      service:
+        name: mongod
+        enabled: yes
