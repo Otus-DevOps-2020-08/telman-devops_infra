@@ -18,4 +18,8 @@ key.json
 .terraform/
 terraform_key.json
 
+#Ansible temp files
+*.retry
+
+# Copy code from webinars
 webinars/*
