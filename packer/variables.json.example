@@ -1,6 +1,6 @@
 {
     "service_account_key_file": "packer/key_file_name.json",
     "folder_id": "abc",
-    "source_image_family": "ubuntu-1604-lts"
+    "source_image_family": "ubuntu-1604-lts",
     "source_image_id": "id_image"
 }
