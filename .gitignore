@@ -20,6 +20,8 @@ terraform_key.json
 
 #Ansible temp files
 *.retry
+jdauphant.nginx
+vault.key
 
 # Copy code from webinars
 webinars/*

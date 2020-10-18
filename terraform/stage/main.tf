@@ -12,6 +12,8 @@ module "app" {
   app_disk_image  = var.app_disk_image
   subnet_id       = var.subnet_id
   db_host_ip = module.db.internal_ip_address_db
+  instance_count = var.instance_count
+  run_provisioner = var.run_provisioner
 }
 
 module "db" {
