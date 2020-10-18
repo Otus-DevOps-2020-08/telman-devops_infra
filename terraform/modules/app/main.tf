@@ -38,21 +38,27 @@ resource "yandex_compute_instance" "app" {
     private_key = file(var.private_key_path)
   }
 
-  provisioner "file" {
-    content = templatefile(
-    "${path.module}/files/puma.service",
-    {
-      database_url = var.db_host_ip,
-    }
-    )
-    destination = "/tmp/puma.service"
-  }
-
   provisioner "remote-exec" {
     inline = [
-      "sudo mv /tmp/puma.service /etc/systemd/system/puma.service",
-      "sudo systemctl daemon-reload",
-      "sudo systemctl restart puma"
+      "sudo apt install git -y"
     ]
   }
+//
+//  provisioner "file" {
+//    content = templatefile(
+//    "${path.module}/files/puma.service",
+//    {
+//      database_url = var.db_host_ip,
+//    }
+//    )
+//    destination = "/tmp/puma.service"
+//  }
+//
+//  provisioner "remote-exec" {
+//    inline = [
+//      "sudo mv /tmp/puma.service /etc/systemd/system/puma.service",
+//      "sudo systemctl daemon-reload",
+//      "sudo systemctl restart puma"
+//    ]
+//  }
 }

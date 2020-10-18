@@ -86,3 +86,8 @@ ansible app -m command -a 'rm -rf ~/reddit'
 ansible-playbook clone.yml
 ```
 > Клонирует репозиторий: changed=1
+
+## Выполнено ДЗ 10
+
+> Написано 3 плейбука: [app|db|deploy].yml
+> Изменен провижининг в packer from sh to ansible
