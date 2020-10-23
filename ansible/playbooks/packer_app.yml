@@ -15,9 +15,5 @@
         - ruby-full
         - ruby-bundler
         - build-essential
-
-    - name: Install git
-      apt:
-        name: git
-        state: present
-        update_cache: yes
+        - git
+      update_cache: yes
