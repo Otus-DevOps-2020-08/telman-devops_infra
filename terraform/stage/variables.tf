@@ -32,7 +32,14 @@ variable "private_key_path" {
 
 variable "instance_count" {
   description = "count of instance"
-  default     = "1"
+  type        = number
+  default     = 1
+}
+
+variable "run_provisioner" {
+  description = "run provisioner"
+  type        = bool
+  default     = false
 }
 
 variable app_disk_image {

@@ -90,4 +90,11 @@ ansible-playbook clone.yml
 ## Выполнено ДЗ 10
 
 > Написано 3 плейбука: [app|db|deploy].yml
+
 > Изменен провижининг в packer from sh to ansible
+
+## Выполнено ДЗ 11
+
+> Создан environments с prod и stage окружением
+
+> Плейбуки вынесены в роли

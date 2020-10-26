@@ -15,3 +15,13 @@ variable "db_host_ip" {
   description = "data base host ip"
   default = "127.0.0.1"
 }
+variable instance_count {
+  description = "count of instance"
+  type        = number
+  default     = 1
+}
+variable run_provisioner {
+  description = "run provisioner"
+  type        = bool
+  default     = false
+}

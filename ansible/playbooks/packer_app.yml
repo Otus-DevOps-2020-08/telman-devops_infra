@@ -4,6 +4,9 @@
   become: true
   tasks:
 
+    - name: Apt-get update
+      shell: apt-get update -y
+
     - name: Install ruby packages
       apt:
         name: "{{ item }}"
@@ -12,9 +15,5 @@
         - ruby-full
         - ruby-bundler
         - build-essential
-
-    - name: Install git
-      apt:
-        name: git
-        state: present
-        update_cache: yes
+        - git
+      update_cache: yes
