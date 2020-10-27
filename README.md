@@ -98,3 +98,11 @@ ansible-playbook clone.yml
 > Создан environments с prod и stage окружением
 
 > Плейбуки вынесены в роли
+
+## Выполнено ДЗ 12
+
+> Сконфигурирован и протестирован Vagrantfile
+
+> Роль db протестированна molecule
+
+> Модифицирован packer

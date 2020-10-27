@@ -1,3 +1,4 @@
+---
 - name: Install ruby packages
   apt:
     name: "{{ item }}"
@@ -8,4 +9,4 @@
     - ruby-bundler
     - build-essential
     - git
-  update_cache: yes
+  tags: ruby

@@ -1,7 +1,8 @@
+---
 - name: Add apt key
   apt_key:
     url: https://www.mongodb.org/static/pgp/server-4.2.asc
-    stage: present
+    state: present
   tags: install
 
 - name: Add repository

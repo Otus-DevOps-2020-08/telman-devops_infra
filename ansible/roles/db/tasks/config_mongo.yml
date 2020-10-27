@@ -1,3 +1,4 @@
+---
 - name: Mongo | Change mongo config file
   template:
     src: mongod.conf.j2
