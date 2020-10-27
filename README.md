@@ -103,6 +103,6 @@ ansible-playbook clone.yml
 
 > Сконфигурирован и протестирован Vagrantfile
 
-> Роль db протестированна molecule
+> Роль db протестирована molecule
 
 > Модифицирован packer
