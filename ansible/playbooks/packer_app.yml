@@ -2,18 +2,6 @@
 - name: Install ruby & bunbler
   hosts: app
   become: true
-  tasks:
 
-    - name: Apt-get update
-      shell: apt-get update -y
-
-    - name: Install ruby packages
-      apt:
-        name: "{{ item }}"
-        state: present
-      loop:
-        - ruby-full
-        - ruby-bundler
-        - build-essential
-        - git
-      update_cache: yes
+  roles:
+    - app

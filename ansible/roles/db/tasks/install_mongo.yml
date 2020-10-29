@@ -1,0 +1,30 @@
+---
+- name: Add apt key
+  apt_key:
+    url: https://www.mongodb.org/static/pgp/server-4.2.asc
+    state: present
+  tags: install
+
+- name: Add repository
+  apt_repository:
+    repo: "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/{{ ansible_distribution|lower }} xenial/mongodb-org/4.2 multiverse"
+    state: present
+  tags: install
+
+- name: Install packages
+  apt:
+    name: "{{ item }}"
+    state: present
+  loop:
+    - apt-transport-https
+    - libcurl3-gnutls
+    - ca-certificates
+    - mongodb-org
+  tags: install
+
+- name: Start mongod service
+  systemd:
+    name: mongod
+    enabled: yes
+    state: started
+  tags: install

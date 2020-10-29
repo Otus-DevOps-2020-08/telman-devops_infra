@@ -25,3 +25,11 @@ vault.key
 
 # Copy code from webinars
 webinars/*
+
+# Vagrant & molecule
+.vagrant/
+*.log
+*.pyc
+.molecule
+.cache
+.pytest_cache
